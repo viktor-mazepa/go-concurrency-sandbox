@@ -8,7 +8,7 @@ import (
 var msg string
 
 func updateMessage(s string, wg *sync.WaitGroup) {
-	wg.Done()
+	defer wg.Done()
 	msg = s
 }
 
